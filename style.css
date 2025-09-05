@@ -1,0 +1,19 @@
+/* Custom styles for the navigation bar */
+.custom-nav {
+    background-color: #173F25;
+    color: white;
+    position: relative;
+
+    /* Guarantees the nav bar is tall enough */
+    min-height: 80px; 
+    
+    /* These properties ensure everything inside is centered vertically */
+    display: flex;
+    align-items: center;
+}
+
+/* Custom style for the logo to control its size */
+.nav-logo img {
+    height: 56px; /* 3.5rem */
+    width: 56px;  /* 3.5rem */
+}

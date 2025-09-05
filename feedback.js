@@ -3,10 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('feedback-form');
     const messageEl = document.getElementById('response-message');
     const submitBtn = document.getElementById('submit-btn');
+    const commentBox = document.getElementById('comment'); // Get the textarea
 
     // Drag and drop elements
     const dropZone = document.getElementById('drop-zone');
     const fileInput = document.getElementById('file-input');
+    // ... (rest of the variable declarations are the same)
     const dropZonePrompt = document.getElementById('drop-zone-prompt');
     const imagePreviewContainer = document.getElementById('image-preview-container');
     const imagePreview = document.getElementById('image-preview');
@@ -16,6 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // !!! IMPORTANT: MAKE SURE THIS IS YOUR CORRECT DEPLOYED URL !!!
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxP5sMDX7I7fjtjbw_QaFK9LhkBspZPrBWCBLj0BywWSW1fYrYVvmMk7zPyoX5jYu8z3A/exec'; 
+
+    // --- Auto-expanding Textarea Logic ---
+    if (commentBox) {
+        commentBox.addEventListener('input', () => {
+            commentBox.style.height = 'auto'; // Reset height
+            commentBox.style.height = `${commentBox.scrollHeight}px`; // Set to content height
+        });
+    }
 
     // --- Drag and Drop Logic ---
 
