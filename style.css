@@ -4,16 +4,41 @@
     color: white;
     position: relative;
 
-    /* Guarantees the nav bar is tall enough */
-    min-height: 80px; 
+    /* * Sets the navbar's height. 5rem is equivalent to 80px if the
+     * browser's base font size is 16px. This creates the vertical space.
+     */
+    height: 5rem; /* 80px */
     
-    /* These properties ensure everything inside is centered vertically */
+    /* * These flex properties are key to centering the logo.
+     * 'display: flex' enables the flexbox layout.
+     * 'align-items: center' vertically centers all direct children (like your logo).
+     */
     display: flex;
     align-items: center;
 }
 
 /* Custom style for the logo to control its size */
 .nav-logo img {
-    height: 56px; /* 3.5rem */
-    width: 56px;  /* 3.5rem */
+    /* Change these values to whatever size you need! */
+    height: 6rem; /* 80px */
+    width: 6rem;  /* 80px */
+}
+/* Add this to your style.css file */
+
+/* This styles the container link (the <a> tag) */
+.custom-feedback-logo {
+  /* This is the equivalent of Tailwind's 'flex-shrink-0' */
+  flex-shrink: 0;
+}
+
+/* This styles the image inside the link */
+.custom-feedback-logo img {
+  /* This sets a specific height, replacing the invalid 'h-[]' */
+  height: 6rem; /* 56px */
+
+  /* This is the equivalent of Tailwind's 'w-auto' */
+  width: auto;
+
+  /* This is the equivalent of Tailwind's 'ml-auto' */
+  margin-left: auto;
 }
