@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - MaBook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 font-sans">
+    <nav class="p-4">
+        <a href="index.html" class="flex items-center text-gray-600 hover:text-gray-800">
+            <img src="images/backimage.jpg" alt="Back to Home" class="h-6 w-6 mr-2">
+            <span>Go Back</span>
+        </a>
+    </nav>
+
+    <header class="bg-white shadow">
+        <div class="container mx-auto py-12 px-6 text-center">
+            <h1 class="text-4xl font-bold text-gray-800 font-serif">Share Your Feedback</h1>
+            <p class="text-gray-600 mt-2">We'd love to hear your thoughts to help us improve MaBook.</p>
+        </div>
+    </header>
+
+    <div class="container mx-auto p-6">
+        <form id="feedback-form" class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md">
+            <div class="mb-6">
+                <label for="comment" class="block text-gray-700 text-sm font-bold mb-2">Your Feedback:</label>
+                <textarea id="comment" name="comment" rows="6" placeholder="Tell us what you think..." required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Attach an Image (Optional):</label>
+                <div id="drop-zone" class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:border-gray-400 transition-colors">
+                    <div id="drop-zone-prompt">
+                        <p class="text-gray-500">Drag & drop an image here, or click to select a file</p>
+                    </div>
+                    <div id="image-preview-container" class="hidden">
+                        <img id="image-preview" src="" alt="Image preview" class="max-h-48 mx-auto rounded-lg"/>
+                        <p id="image-name" class="text-sm text-gray-600 mt-2"></p>
+                    </div>
+                </div>
+                <input type="file" id="file-input" class="hidden" accept="image/*">
+            </div>
+
+            <div class="mb-6">
+                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Your Email (Optional):</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            
+            <button type="submit" id="submit-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">Submit Feedback</button>
+            <p id="response-message" class="text-center mt-4"></p>
+        </form>
+    </div>
+
+    <script src="feedback.js"></script>
+</body>
+</html>
