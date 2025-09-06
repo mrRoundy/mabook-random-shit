@@ -47,6 +47,8 @@
         </form>
     </main>
 
+    <div id="footer-placeholder"></div>
+
     <script src="feedback.js"></script>
     <script>
         // Fetch and insert the navigation bar
@@ -54,6 +56,12 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+         // === ADD THIS SCRIPT TO LOAD THE FOOTER ===
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
             });
     </script>
 </body>

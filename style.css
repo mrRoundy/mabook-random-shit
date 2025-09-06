@@ -3,18 +3,10 @@
     background-color: #173F25;
     color: white;
     position: relative;
-
-    /* * Sets the navbar's height. 5rem is equivalent to 80px if the
-     * browser's base font size is 16px. This creates the vertical space.
-     */
     height: 5rem; /* 80px */
-    
-    /* * These flex properties are key to centering the logo.
-     * 'display: flex' enables the flexbox layout.
-     * 'align-items: center' vertically centers all direct children (like your logo).
-     */
     display: flex;
     align-items: center;
+    font-family: 'Inter Light', serif;
 }
 
 /* Custom style for the logo to control its size */
@@ -42,3 +34,4 @@
   /* This is the equivalent of Tailwind's 'ml-auto' */
   margin-left: auto;
 }
+

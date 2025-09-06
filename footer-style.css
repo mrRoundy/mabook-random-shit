@@ -1,0 +1,36 @@
+/* --- Footer-Only Styles --- */
+.site-footer {
+    background-color: #173F25; /* Same dark green as the nav bar */
+    color: white;
+    padding: 1.2rem 1rem; /* Adds vertical and horizontal padding */
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1500px;
+    margin: 0 auto; /* Centers the content */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem; /* Creates space between the brand name and the info text */
+}
+
+.footer-info {
+    font-size: 0.875rem;
+    color: #E5E7EB; /* A slightly softer white for the text */
+    text-align: right; /* Aligns the info text to the right */
+}
+
+.footer-info a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: white; /* Makes links brighter on hover */
+}
+
+.footer-info .separator {
+    margin: 0 0.5rem; /* Adds space around the "|" separators */
+}
