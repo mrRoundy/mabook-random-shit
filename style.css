@@ -2,11 +2,11 @@
 .custom-nav {
     background-color: #173F25;
     color: white;
-    position: relative;
-    height: 5rem; /* 80px */
+    height: 5rem;
     display: flex;
     align-items: center;
     font-family: 'Inter Light', serif;
+    padding: 0 3rem;
 }
 
 /* Custom style for the logo to control its size */
@@ -34,4 +34,3 @@
   /* This is the equivalent of Tailwind's 'ml-auto' */
   margin-left: auto;
 }
-

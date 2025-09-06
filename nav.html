@@ -12,7 +12,7 @@
 
         <div class="flex-shrink-0 nav-logo">
             <a href="#">
-                <img src="images/logo.png" alt="MaBook Logo">
+                <img src="images/logo.png" alt="MaBook Logo" class="h-[7em] w-auto">
             </a>
         </div>
 
@@ -42,18 +42,3 @@
         </nav>
     </div>
 </nav>
-
-<script>
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuText = document.getElementById('menu-text');
-
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        if (mobileMenu.classList.contains('hidden')) {
-            menuText.textContent = 'Menu';
-        } else {
-            menuText.textContent = 'Close';
-        }
-    });
-</script>
