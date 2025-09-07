@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MaBook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="style.css" rel="stylesheet" /> 
+    <link href="style1.css" rel="stylesheet" />
+    <link href="privacy-style.css" rel="stylesheet" /> 
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+</head>
+<body>
+    
+    <div id="navbar-container"></div>
+
+    <div class="container mx-auto px-6 py-12 text-center">
+     <h1 class="inline-block bg-[#173F25] text-white font-serif text-6xl py-5 px-10 rounded-full mb-[-1em]">Privacy Policy</h1>
+    </div>
+    </header>
+
+    <div class="container policy-layout">
+        <aside class="policy-sidebar">
+         <div class="sidebar-box">
+          <h3 class="sidebar-box-title">On this page</h3>
+           <nav>
+                <ul>
+                <li><a href="#introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#information-collection" class="nav-link">Information We Collect</a></li>
+                <li><a href="#information-use" class="nav-link">How We Use Information</a></li>
+                <li><a href="#information-sharing" class="nav-link">Information Sharing</a></li>
+                <li><a href="#data-retention" class="nav-link">Data Retention</a></li>
+                <li><a href="#data-security" class="nav-link">Data Security</a></li>
+                <li><a href="#childrens-privacy" class="nav-link">Children's Privacy</a></li>
+                <li><a href="#contact-us" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+           </div>
+        </aside>
+
+        <main class="policy-content">
+            <p><em>Last Updated: September 6, 2025</em></p>
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>Welcome to MaBook ("we," "us," or "our"). We are committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our AI-powered book recommendation service (the "Service").</p>
+            </section>
+            <section id="information-collection">
+                <h2>Information We Collect</h2>
+                <p>We believe in data minimization. Our Service does not require you to create an account, and we do not collect any personal information like your name, email address, or IP address.</p>
+                <p>The only information we process is the <strong>User Prompt</strong>: the text query you voluntarily submit to our search box to receive a book recommendation. We strongly advise you not to include any sensitive personal data in your prompts.</p>
+            </section>
+            <section id="information-use">
+                <h2>How We Use Your Information</h2>
+                <p>Your prompt is used exclusively to generate a book recommendation in a single session. This is an automated, multi-step process:</p>
+                <ol>
+                    <li>Your prompt is sent to a third-party AI service to determine its language and identify relevant book genres.</li>
+                    <li>We use these genres to find matching books from our database.</li>
+                    <li>Highlights from those books are sent back to the AI, along with your original prompt, to be ranked for relevance and translated if necessary.</li>
+                </ol>
+            </section>
+            <section id="information-sharing">
+                <h2>Information Sharing and Third Parties</h2>
+                <p>To provide our Service, your prompt is shared with our third-party AI provider for processing. We do not sell, rent, or share your prompts with any other third parties.</p>
+            </section>
+            <section id="data-retention">
+                <h2>Data Retention</h2>
+                <p><strong>Currently, we do not store your prompts after your session ends.</strong> However, to make our AI smarter and more helpful, we plan to save prompts in the future. This will allow us to use feedback to improve the quality of our recommendations. If our data handling practices change, we will update this policy.</p>
+            </section>
+            <section id="data-security">
+                <h2>Data Security</h2>
+                <p>We implement reasonable security measures to protect the information during transmission. However, no method of transmission over the Internet is 100% secure, and we cannot guarantee its absolute security.</p>
+            </section>
+            <section id="childrens-privacy">
+                <h2>Children's Privacy</h2>
+                <p>Our Service is available to a general audience. We do not knowingly collect any personally identifiable information from children under the age of 13. If you believe your child has provided us with information, please contact us, and we will take steps to remove it.</p>
+            </section>
+            <section id="contact-us">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or concerns about this Privacy Policy, please contact us at <a href="#" class="contact-link">mabook.official@gmail.com</a>.</p>
+            </section>
+        </main>
+    </div>
+
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="componentLoader.js"></script>
+    <script src="policy.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // This loads and initializes the main navbar
+            loadComponent('nav.html', 'navbar-container', initializeNavbar);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! - MaBook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-[#FDF9F6] font-sans">
+    
+    <div id="navbar-placeholder"></div>
+
+    <div class="flex items-center justify-center" style="height: calc(100vh - 80px);"> <div class="text-center bg-white p-10 rounded-lg shadow-lg">
+            <h1 class="text-4xl font-bold text-[#173F25] font-serif mb-4">Thank You!</h1>
+            <p class="text-gray-600 mb-6">Your feedback has been received and is greatly appreciated.</p>
+            <a href="index.html" class="bg-[#173F25] hover:opacity-90 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline">
+                Go Back to Home
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Fetch and insert the navigation bar
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

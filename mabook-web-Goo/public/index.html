@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaBook - Book Recommendations</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inter:300&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="footer-style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+<div class="content-wrapper">
+    <div class="page-container">
+        <header class="hero-banner">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>MaBook</h1>
+                    <p>Solves Your Problems, Not Someone Else's,<br>Opinions</p>
+                </div>
+                
+                <div class="hero-books">
+                    <div class="carousel-container">
+                        <div class="carousel-loading">Loading books...</div>
+                        <div class="book-carousel" style="display: none;">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <h2>Every reader deserves a match—what's yours?</h2>
+                <a href="prompt.html">
+                     <textarea placeholder="Share what you're interested in, what challenges you're facing, or what goals you want to achieve..." readonly style="cursor: pointer;"></textarea>
+                </a>
+            </section>
+
+           <section class="recommendations">
+                <div class="recommendation-header">
+                    <h2>Book recommendation</h2>
+                </div>
+                
+                <section id="finance-shelf" class="bookshelf-section">
+                    <div class="category">
+                        <h3>Finance</h3>
+                        <p>Books where money drives ambition, power, and life’s big gambles.</p>
+                    </div>
+                    <div class="bookshelf-controls-wrapper">
+                        <button class="scroll-btn" aria-label="Scroll left">&#10094;</button>
+                        <div class="bookshelf-container">
+                            <div class="bookshelf"></div>
+                        </div>
+                        <button class="scroll-btn" aria-label="Scroll right">&#10095;</button>
+                    </div>
+                </section>
+
+                <section id="mental-health-shelf" class="bookshelf-section">
+                    <div class="category">
+                        <h3>Mental health</h3>
+                        <p>Books exploring minds, healing, resilience, and inner journeys.</p>
+                    </div>
+                    <div class="bookshelf-controls-wrapper">
+                        <button class="scroll-btn" aria-label="Scroll left">&#10094;</button>
+                        <div class="bookshelf-container">
+                            <div class="bookshelf"></div>
+                        </div>
+                        <button class="scroll-btn" aria-label="Scroll right">&#10095;</button>
+                    </div>
+                </section>
+
+                <section id="habits-shelf" class="bookshelf-section">
+                    <div class="category">
+                        <h3>Habits</h3>
+                        <p>Books on routines that shape success, growth, and everyday life.</p>
+                    </div>
+                    <div class="bookshelf-controls-wrapper">
+                        <button class="scroll-btn" aria-label="Scroll left">&#10094;</button>
+                        <div class="bookshelf-container">
+                            <div class="bookshelf"></div>
+                        </div>
+                        <button class="scroll-btn" aria-label="Scroll right">&#10095;</button>
+                    </div>
+                </section>
+
+                <section class="cta-section">
+    <a href="prompt.html" class="cta-button" style="text-decoration: none; display: inline-block;">Discover Your Perfect Book</a>
+    <p class="cta-text">
+        Share what you're interested in, what challenges you're facing, or what goals you want to achieve. Our AI will recommend the perfect books for you.
+    </p>
+</section>
+            </main>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script type="module" src="script.js"></script>
+    <script src="componentLoader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // This loads the nav.html into the navbar-container div
+            // The 'initializeNavbar' function makes the nav links work
+            loadComponent('nav.html', 'navbar-container', initializeNavbar);
+            
+            // This loads the footer.html into the footer-container div
+            // It also has a small function to update the year automatically
+            loadComponent('footer.html', 'footer-container', () => {
+                const yearSpan = document.getElementById('footer-year');
+                if (yearSpan) {
+                    yearSpan.textContent = new Date().getFullYear();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

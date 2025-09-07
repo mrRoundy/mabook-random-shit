@@ -1,0 +1,63 @@
+body {
+    padding-top: 80px;
+}
+
+/* Custom styles for the navigation bar */
+.custom-nav {
+    background-color: #173F25;
+    color: white;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    font-family: 'Inter Light', serif;
+    padding: 0 3rem;
+}
+
+/* Custom style for the logo to control its size */
+.nav-logo img {
+    /* Change these values to whatever size you need! */
+    height: 6rem; /* 80px */
+    width: 6rem;  /* 80px */
+}
+.nav-logo {
+    position: absolute;
+    left: 51%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Add this to your style.css file */
+
+/* This styles the container link (the <a> tag) */
+.custom-feedback-logo {
+  /* This is the equivalent of Tailwind's 'flex-shrink-0' */
+  flex-shrink: 0;
+}
+
+/* This styles the image inside the link */
+.custom-feedback-logo img {
+  /* This sets a specific height, replacing the invalid 'h-[]' */
+  height: 6rem; /* 56px */
+
+  /* This is the equivalent of Tailwind's 'w-auto' */
+  width: auto;
+
+  /* This is the equivalent of Tailwind's 'ml-auto' */
+  margin-left: auto;
+}
+/* mabook-web-Goo/public/style1.css */
+
+.custom-nav {
+    background-color: #173F25;
+    color: white;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    font-family: 'Inter Light', serif;
+    padding: 0 3rem;
+    /* --- Add these properties --- */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}

@@ -1,0 +1,48 @@
+<nav class="custom-nav px-12 md:px-16">
+    <div class="container mx-auto flex justify-between items-center relative">
+
+        <div class="hidden md:flex flex-1 justify-start items-center space-x-8">
+            <a href="index.html" class="hover:text-gray-300 transition-colors">Home</a>
+            <a href="prompt.html" class="flex items-center hover:text-gray-300 transition-colors">
+                <img src="image/star.png" alt="Star" class="h-[3em] w-auto mr-[-0.75em]"/>
+                <span>MaBook AI</span>
+            </a>
+            <a href="#" class="hover:text-gray-300 transition-colors">Bookshelf</a>
+            <a href="why_us.html" class="hover:text-gray-300 transition-colors">Why Us?</a>
+        </div>
+
+        <div class="flex-shrink-0 nav-logo">
+            <a href="index.html">
+                <img src="image/logo.png" alt="MaBook Logo" class="h-[7em] w-auto">
+            </a>
+        </div>
+
+        <div class="flex flex-1 justify-end items-center">
+            <a href="feedback.html" class="hidden md:flex items-center hover:text-gray-300 transition-colors">
+                <span>Feedback</span>
+                <img src="image/likeanddislike.png" alt="Feedback Icon" class="h-[3.5em] w-auto ml-[-0.5em]"/>
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-2xl z-50">
+                <span id="menu-text">Menu</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-[#173F25] z-40 flex flex-col items-center justify-center text-white">
+        <nav class="flex flex-col items-center space-y-8 text-2xl">
+            <a href="index.html" class="flex items-center">
+                <span>Home</span>
+            </a>
+            <a href="prompt.html" class="flex items-center">
+                <img src="image/star.png" alt="Star" class="h-[1.2em] w-auto mr-2"/>
+                <span>MaBook AI</span>
+            </a>
+            <a href="#">Bookshelf</a>
+            <a href="why_us.html">Why Us?</a>
+            <a href="feedback.html" class="flex items-center mt-4">
+                <span>Feedback</span>
+                <img src="image/likeanddislike.png" alt="Feedback Icon" class="h-[1.2em] w-auto ml-3"/>
+            </a>
+        </nav>
+    </div>
+</nav>

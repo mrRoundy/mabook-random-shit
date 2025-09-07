@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mabook | Why Us?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- Core Theme & Typography --- */
+        body {
+            /* Using Inter for body text for its excellent readability */
+            font-family: 'Inter', sans-serif;
+            /* Using the specified cream color for a warm, classic background */
+            background-color: #FDF9F6;
+            /* The primary text color is the deep, elegant green */
+            color: #173F25;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            /* Using Playfair Display for all headings to create a classic, literary feel */
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- Animations --- */
+
+        /* Subtle pulse animation for the hero icon */
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .icon-pulse {
+            animation: pulse-subtle 3s ease-in-out infinite;
+        }
+        
+        /* Scroll-triggered fade-in-up animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Interactive 3D Book (Re-skinned for a classic look) --- */
+        .book-container {
+            perspective: 1200px;
+        }
+        .book {
+            width: 220px;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transform: rotateY(-35deg);
+        }
+        .book-container:hover .book {
+            transform: rotateY(-155deg);
+        }
+        .book-cover, .book-back, .book-spine {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #173F25;
+        }
+        .book-cover {
+            transform: translateZ(20px);
+            /* Elegant green gradient for a rich, textured look */
+            background: linear-gradient(45deg, #173F25, #2a5d3f);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .book-spine {
+            width: 40px;
+            height: 100%;
+            background: #173F25;
+            transform: rotateY(-90deg) translateX(-20px);
+            transform-origin: left;
+        }
+         .book-back {
+            transform: rotateY(180deg) translateZ(20px);
+            background-color: #173F25;
+        }
+        .book-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out 0.7s;
+        }
+        .book-container:hover .book-content {
+           opacity: 1;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <main>
+
+        <section class="min-h-screen flex items-center bg-[#FDF9F6]">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <div class="flex justify-center mb-6 text-[#173F25]">
+                        <svg class="w-16 h-16 icon-pulse" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
+                    </div>
+                    <h2 class="text-5xl md:text-7xl font-black text-[#173F25] leading-tight mb-4">Discover Reads That Truly Resonate.</h2>
+                    <p class="text-lg md:text-xl text-[#173F25]/70">
+                        You invest your time, hoping for a story that connects, only to find it wasn't for you.
+                        The problem isn't the book—it's the flawed system of discovery.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <hr/>
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h3 class="text-sm font-semibold uppercase text-[#173F25]/60 tracking-wider">The Flaw in Modern Discovery</h3>
+                    <h2 class="text-4xl md:text-5xl font-bold text-[#173F25] mt-2 mb-6">Why Recommendations Fail.</h2>
+                    <p class="text-lg text-[#173F25]/70 mb-16">
+                        Bias is a systematic error leading to irrelevant outcomes. In the world of books, it's the hidden force pushing you towards the popular, not the perfect fit.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                    <div class="bg-white border border-[#173F25]/10 p-8 rounded-lg text-center reveal">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-5 text-[#173F25]/80" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" /></svg>
+                        <h4 class="text-2xl font-bold text-[#173F25] mb-2">Paid Promotions</h4>
+                        <p class="text-[#173F25]/70">Recommendations influenced by marketing budgets, not genuine merit or relevance to you.</p>
+                    </div>
+                    <div class="bg-white border border-[#173F25]/10 p-8 rounded-lg text-center reveal" style="transition-delay: 200ms;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-5 text-[#173F25]/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.289 2.72a3 3 0 01-4.682-2.72 9.094 9.094 0 013.741.479m-.98-13.54a3 3 0 014.682 2.72 9.094 9.094 0 01-3.741-.479m5.481 1.35a3 3 0 00-4.682-2.72 9.094 9.094 0 00-3.741.479M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        <h4 class="text-2xl font-bold text-[#173F25] mb-2">Mismatched Tastes</h4>
+                        <p class="text-[#173F25]/70">Suggestions based on a reviewer's personal taste, which rarely aligns perfectly with your own.</p>
+                    </div>
+                    <div class="bg-white border border-[#173F25]/10 p-8 rounded-lg text-center reveal" style="transition-delay: 400ms;">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-5 text-[#173F25]/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" /></svg>
+                        <h4 class="text-2xl font-bold text-[#173F25] mb-2">Flawed Algorithms</h4>
+                        <p class="text-[#173F25]/70">Systems designed to show you what's popular, not what's profoundly right for you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr/>
+        
+        <section class="py-20 bg-[#FDF9F6]">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="text-left reveal">
+                        <h3 class="text-sm font-semibold uppercase text-[#173F25]/60 tracking-wider">Our Solution</h3>
+                        <h2 class="text-4xl md:text-5xl font-bold text-[#173F25] mt-2 mb-6">We Look Inside the Story.</h2>
+                        <p class="text-lg text-[#173F25]/70 mb-8">
+                           Instead of relying on biased ratings and reviews, Mabook analyzes the heart of the book itself. We extract key themes and highlights, allowing the author's true voice to guide your decision.
+                        </p>
+                        <ul class="space-y-4 text-left">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-[#173F25] mr-3 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <span><strong class="font-semibold text-[#173F25]">Evaluate content objectively,</strong> based on the actual words on the page.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-[#173F25] mr-3 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <span><strong class="font-semibold text-[#173F25]">Make informed decisions,</strong> free from the influence of external noise and hype.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-[#173F25] mr-3 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <span><strong class="font-semibold text-[#173F25]">Finally find books</strong> that align perfectly with your unique expectations.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-center items-center h-96 reveal" style="transition-delay: 200ms;">
+                        <div class="book-container">
+                            <div class="book">
+                                <div class="book-cover">
+                                    <h3 class="text-white font-bold text-3xl" style="font-family: 'Playfair Display', serif;">The Old Way</h3>
+                                    <p class="text-xs text-[#FDF9F6]/50 mt-2">Biased reviews & ratings</p>
+                                </div>
+                                <div class="book-spine"></div>
+                                <div class="book-back"></div>
+                            </div>
+                             <div class="book-content text-[#173F25] text-center">
+                                <h3 class="font-bold text-3xl" style="font-family: 'Playfair Display', serif;">The Mabook Way</h3>
+                                <p class="mt-2 text-sm text-[#173F25]/70">Insights from within the book.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr/>
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold text-[#173F25] mb-4">Fairer, Faster, More Authentic.</h2>
+                    <p class="text-lg text-[#173F25]/70 mb-16">
+                       By focusing on what's <strong class="font-semibold text-[#173F25]">inside</strong> the book, we deliver a recommendation experience you can finally trust.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                     <div class="text-center reveal p-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-[#173F25]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
+                        <h4 class="text-2xl font-bold mb-2">Find Your Perfect Match</h4>
+                        <p class="text-[#173F25]/70">Discover books that fit your specific needs and interests, whether for learning, leisure, or inspiration.</p>
+                    </div>
+                     <div class="text-center reveal p-6" style="transition-delay: 200ms;">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-[#173F25]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.311a7.5 7.5 0 01-7.5 0c-1.255 0-2.443.29-3.5.832m14.5-1.664a7.5 7.5 0 00-7.5 0c-1.255 0-2.443.29-3.5.832m14.5-1.664L19.5 5.5m-5.5 5.5l-1.5-1.5" /></svg>
+                        <h4 class="text-2xl font-bold mb-2">Unlock Deeper Knowledge</h4>
+                        <p class="text-[#173F25]/70">Use our platform for self-development, to expand your expertise, or to find your next source of inspiration.</p>
+                    </div>
+                     <div class="text-center reveal p-6" style="transition-delay: 400ms;">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-[#173F25]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <h4 class="text-2xl font-bold mb-2">Experience True Transparency</h4>
+                        <p class="text-[#173F25]/70">Get fairer, more honest, and deeply relevant recommendations that honor your unique perspective.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[#173F25] text-white">
+            <div class="container mx-auto px-6 py-20 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-[#FDF9F6]" style="font-family: 'Playfair Display', serif;">Your Next Great Read is Waiting.</h2>
+                <p class="text-lg md:text-xl text-[#FDF9F6]/70 mb-10 max-w-2xl mx-auto">Stop wasting time on bad recommendations. Start discovering books that will truly change your life.</p>
+                <a href="prompt.html" class="bg-white text-[#173F25] font-bold py-4 px-10 rounded-md text-lg hover:bg-[#FDF9F6] transform hover:scale-105 transition-all duration-300 shadow-xl">
+                    Find My Perfect Read
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#FDF9F6] border-t border-[#173F25]/10">
+        <div class="container mx-auto px-6 py-8 text-center text-[#173F25]/50">
+            <p>&copy; 2025 Mabook. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for scroll-triggered animations (no changes needed here, it's perfect)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.15 // Trigger when 15% of the element is visible
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

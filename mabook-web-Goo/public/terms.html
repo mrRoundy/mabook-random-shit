@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - MaBook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="style.css" rel="stylesheet" />
+    <link href="style1.css" rel="stylesheet" />
+    <link href="terms-style.css" rel="stylesheet" /> 
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="navbar-container"></div>
+
+<div class="content-wrapper">
+    <div class="container mx-auto px-8 py-12 text-center">
+     <h1 class="inline-block bg-[#173F25] text-white font-serif text-6xl py-5 px-10 rounded-full mb-[-1em]">Terms of Service</h1>
+    </div>
+    </header>
+
+    <div class="container policy-layout">
+        <aside class="policy-sidebar">
+         <div class="sidebar-box">
+          <h3 class="sidebar-box-title">On this page</h3>
+           <nav>
+          <ul>  <li><a href="#agreement" class="nav-link">Agreement to Terms</a></li>
+                <li><a href="#service-desc" class="nav-link">Service Description</a></li>
+                <li><a href="#privacy-data" class="nav-link">Privacy and User Data</a></li>
+                <li><a href="#disclaimer" class="nav-link">Disclaimer of Warranties</a></li>
+                <li><a href="#modifications" class="nav-link">Service Modifications</a></li>
+                <li><a href="#prohibited-use" class="nav-link">Prohibited Use</a></li>
+                <li><a href="#governing-law" class="nav-link">Governing Law</a></li>
+                <li><a href="#changes" class="nav-link">Changes to These Terms</a></li>
+                <li><a href="#contact-us" class="nav-link">Contact Us</a></li>
+          </ul> </nav>
+         </div>
+        </aside>
+
+        <main class="policy-content">
+            <p><em>Last Updated: September 6, 2025</em></p>
+            <section id="agreement">
+                <h2>Agreement to Terms</h2>
+                <p>By accessing and using the MaBook website (the "Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree with any part of these terms, you must not use our Service.</p>
+            </section>
+        
+            <section id="service-desc">
+                <h2>Service Description</h2>
+                <p>MaBook provides an AI-powered book discovery platform. Our Service analyzes your text prompts to deliver personalized book recommendations and relevant highlights designed to help you find solutions and insights for your specific needs. The Service is accessible without a user account.</p>
+            </section>
+        
+            <section id="privacy-data">
+                <h2>Privacy and User Data</h2>
+                <p>Your privacy is important to us. We handle your information as described in our <a href="privacy.html">Privacy Policy</a>. As we work to continuously improve our AI, our data practices may evolve. We are committed to transparency and will update our Privacy Policy to reflect any changes in how we improve our service for you in the future.</p>
+            </section>
+        
+            <section id="disclaimer">
+                <h2>Disclaimer of Warranties</h2>
+                <p>The Service is provided on an "AS IS" and "AS AVAILABLE" basis. While we are confident in our AI's ability to provide relevant and insightful book recommendations, all content is for informational purposes only. We strive for accuracy and excellence, but we cannot guarantee that every recommendation will be a perfect fit for your individual needs.</p>
+            </section>
+        
+            <section id="modifications">
+                <h2>Service Modifications</h2>
+                <p>We are constantly working to improve the MaBook experience. We reserve the right to modify, update, or discontinue features of the Service at any time without prior notice. These changes are part of our ongoing effort to enhance our AI and provide you with better recommendations every day.</p>
+            </section>
+        
+            <section id="prohibited-use">
+                <h2>Prohibited Use</h2>
+                <p>You agree not to use the Service for any unlawful purpose or to engage in any activity that could harm, disrupt, or impair our website or AI. Prohibited activities include, but are not limited to, using automated scripts or bots to scrape data or overwhelm our servers.</p>
+            </section>
+        
+            <section id="governing-law">
+                <h2>Governing Law</h2>
+                <p>These Terms shall be governed and construed in accordance with the laws of the Republic of Indonesia, without regard to its conflict of law provisions.</p>
+            </section>
+        
+             <section id="changes">
+                <h2>Changes to These Terms</h2>
+                <p>We reserve the right to modify these Terms at any time. We will notify users by updating the "Last Updated" date at the top of this page. Your continued use of the Service after any changes constitutes your acceptance of the new Terms.</p>
+            </section>
+        
+            <section id="contact-us">
+                <h2>Contact Us</h2>
+                <p>If you have any questions about these Terms, please contact us at <a href="#" class="contact-link">mabook.official@gmail.com</a>.</p>
+            </section>
+        </main>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="componentLoader.js"></script>
+    <script src="policy.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // This loads and initializes the main navbar
+            loadComponent('nav.html', 'navbar-container', initializeNavbar);
+        });
+    </script>
+</body>
+</html>
